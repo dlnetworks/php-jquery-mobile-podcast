@@ -51,21 +51,20 @@ preg_match('/^([0-9]*)/',$tmpMB,$aSize);
 $sSize = $aSize[0];
 $sTime = $iTunes->duration;
 $sSubtitle = $iTunes->subtitle;
-$sDescription = $oItem->title;
 if (stripos ($sTime, ':') !== false) {
 	print '<li data-role="list-divider"><strong>' . $spubDate . ' <span class="ui-li-count">' . $sTime . '</span></strong></li>' . "\n";
 	} else {
 	print '<li data-role="list-divider">' . $spubDate . '</li>' . "\n";
 }
 if (stripos ($sImage, 'http') !== false) {
-	print '<li><a href="#' . $i . '"><img src="' . $sImage . '"><h2>' . $sTitle . '</h2><strong>' . $sSubtitle . '</strong><span class="ui-li-count">' . $sSize . ' MB</span></a><a href="' . $sEnclosure . '"></a></li>' . "\n";
+	print '<li><a href="#' . $i . '"><img src="' . $sImage . '"><h2>' . $sTitle . '</h2><p>' . $sSubtitle . '</p><span class="ui-li-count">' . $sSize . ' MB</span></a><a href="' . $sEnclosure . '"></a></li>' . "\n";
 	} else {
-	print '<li><a href="#' . $i . '"><h2>' . $sTitle . '</h2><strong>' . $sSubtitle . '</strong><span class="ui-li-count">' . $sSize . ' MB</span></a><a href="' . $sEnclosure . '"></a></li>' . "\n";
+	print '<li><a href="#' . $i . '"><h2>' . $sTitle . '</h2><p>' . $sSubtitle . '</p><span class="ui-li-count">' . $sSize . ' MB</span></a><a href="' . $sEnclosure . '"></a></li>' . "\n";
 }	
 $i = $i + 1;
 }?>
-</ul>
-</div>
+</ul></div>
+<div data-role="footer" data-position="fixed"></div>
 </div>
 </body>
 </html>
