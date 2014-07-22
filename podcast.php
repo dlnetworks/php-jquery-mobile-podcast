@@ -64,7 +64,6 @@ if (stripos ($sImage, 'http') !== false) {
 $i = $i + 1;
 }?>
 </ul></div>
-<div data-role="footer" data-position="fixed"></div>
 </div>
 </body>
 </html>
